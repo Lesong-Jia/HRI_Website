@@ -8,6 +8,5 @@ export default {
   },
   getIndex() {
     return axiosConfig.get('/answer/index');
-
   }
 }

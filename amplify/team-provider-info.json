@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hriwebsite-dev-13943-authRole",
+      "UnauthRoleArn": "arn:aws:iam::211125741192:role/amplify-hriwebsite-dev-13943-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::211125741192:role/amplify-hriwebsite-dev-13943-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-hriwebsite-dev-13943-deployment",
+      "UnauthRoleName": "amplify-hriwebsite-dev-13943-unauthRole",
+      "StackName": "amplify-hriwebsite-dev-13943",
+      "StackId": "arn:aws:cloudformation:us-east-2:211125741192:stack/amplify-hriwebsite-dev-13943/579ad590-c8a8-11ee-8c5d-0a1a1cd14f73",
+      "AmplifyAppId": "d19ij9zpzedv4"
+    },
+    "categories": {
+      "function": {
+        "HriWebsiteLambda": {},
+        "hriwebsitea5dbf93e": {
+          "deploymentBucketName": "amplify-hriwebsite-dev-13943-deployment",
+          "s3Key": "amplify-builds/hriwebsitea5dbf93e-552b5a487545524d565a-build.zip"
+        }
+      },
+      "api": {
+        "api94aba13c": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "api": {
+    "api94aba13c": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hriwebsitea5dbf93e"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "hriwebsitea5dbf93e": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_hriwebsitea5dbf93e_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hriwebsitea5dbf93e"
+        }
+      ]
+    },
+    "AMPLIFY_function_hriwebsitea5dbf93e_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hriwebsitea5dbf93e"
+        }
+      ]
+    }
+  }
+}
