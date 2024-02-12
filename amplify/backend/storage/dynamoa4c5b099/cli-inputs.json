@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamoa4c5b099",
+  "tableName": "HRI_Emotion_Data",
+  "partitionKey": {
+    "fieldName": "ParticipantID",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

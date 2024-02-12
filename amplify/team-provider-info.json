@@ -1,26 +1,28 @@
 {
-  "dev": {
+  "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-hriwebsite-dev-13943-authRole",
-      "UnauthRoleArn": "arn:aws:iam::211125741192:role/amplify-hriwebsite-dev-13943-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::211125741192:role/amplify-hriwebsite-dev-13943-authRole",
+      "AuthRoleName": "amplify-amplify7ec109fb55394-staging-202748-authRole",
+      "UnauthRoleArn": "arn:aws:iam::211125741192:role/amplify-amplify7ec109fb55394-staging-202748-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::211125741192:role/amplify-amplify7ec109fb55394-staging-202748-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-hriwebsite-dev-13943-deployment",
-      "UnauthRoleName": "amplify-hriwebsite-dev-13943-unauthRole",
-      "StackName": "amplify-hriwebsite-dev-13943",
-      "StackId": "arn:aws:cloudformation:us-east-2:211125741192:stack/amplify-hriwebsite-dev-13943/579ad590-c8a8-11ee-8c5d-0a1a1cd14f73",
-      "AmplifyAppId": "d19ij9zpzedv4"
+      "DeploymentBucketName": "amplify-amplify7ec109fb55394-staging-202748-deployment",
+      "UnauthRoleName": "amplify-amplify7ec109fb55394-staging-202748-unauthRole",
+      "StackName": "amplify-amplify7ec109fb55394-staging-202748",
+      "StackId": "arn:aws:cloudformation:us-east-2:211125741192:stack/amplify-amplify7ec109fb55394-staging-202748/057b54a0-c91c-11ee-8222-061eb575611b",
+      "AmplifyAppId": "dv2siv59dxgvj"
     },
     "categories": {
       "function": {
-        "HriWebsiteLambda": {},
-        "hriwebsitea5dbf93e": {
-          "deploymentBucketName": "amplify-hriwebsite-dev-13943-deployment",
-          "s3Key": "amplify-builds/hriwebsitea5dbf93e-552b5a487545524d565a-build.zip"
+        "hriwebsite4eade50d": {
+          "deploymentBucketName": "amplify-amplify7ec109fb55394-staging-202748-deployment",
+          "s3Key": "amplify-builds/hriwebsite4eade50d-7544634f7632794e7734-build.zip"
         }
       },
+      "storage": {
+        "dynamoa4c5b099": {}
+      },
       "api": {
-        "api94aba13c": {}
+        "api340d2441": {}
       }
     }
   }

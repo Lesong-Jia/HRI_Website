@@ -21,6 +21,7 @@ import moment from "moment";
 import { mapGetters } from "vuex";
 import consent from "./components/consent.vue";
 import instruction from "./components/instruction.vue";
+
 export default {
   components: { instruction, consent },
   data() {
@@ -39,19 +40,33 @@ export default {
   },
   mounted() {
     this.setIsPass();
+    this.setupUnityListener();
+  },
+  beforeDestroy() {
+    window.removeEventListener('UnityMessage', this.handleUnityMessage);
   },
   methods: {
+    setupUnityListener() {
+      window.addEventListener('UnityMessage', this.handleUnityMessage);
+    },
+    handleUnityMessage(event) {
+      var data = JSON.parse(event.detail);
+      this.$store.commit('SET_ALL_QUESTION_FORM', data);
+    },
     setIsPass() {
       this.$store.commit("SET_IS_PASS", false);
     },
-    gotoNext() {
+    async gotoNext() {
       if (this.active === 1) {
         this.active = 2;
       } else {
+        const timestamp = moment().format("YYYYMMDDHHmmss");
+        const randomNum = Math.floor(Math.random() * 1000000); // 生成一个六位数的随机数
+        const uniqueId = `${timestamp}${randomNum}`;
         this.$store.commit("SET_ALL_QUESTION_FORM", {
-          startTime: moment().format("YYYY-MM-DD HH:mm:ss"),
+          ParticipantID: uniqueId,
         });
-        this.$router.push("/startQuestionnaire");
+        this.$router.push("/scenarioTutorial");
       }
     },
     // unity发送事件执行

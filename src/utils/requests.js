@@ -5,8 +5,7 @@ import router from "@/router";
 import $ from 'jquery';
 
 axios.defaults.timeout = 100000;
-
-// const baseURL = process.env.NODE_ENV === "production" ? "http://localhost:8040/game/answer" : "http://192.168.1.44:8040/vgq";
+//
 let baseURL
 const getBaseUrl = function () {
   $.ajax({
@@ -28,7 +27,7 @@ console.log(baseURL);
 axios.interceptors.request.use(function (config) {
   // 得到请求方式和请求体数据
   const { method, data, headers } = config;
-  headers.Authorization = localStorage.getItem('loginToken');
+  //headers.Authorization = localStorage.getItem('loginToken');
   // let hasContentType = headers['Content-Type'];
   const isHeadersOfJson = headers['Content-Type'] && headers['Content-Type'] === 'application/json';
   const isHeadersOfFormData = headers['Content-Type'] && headers['Content-Type'] === 'multipart/form-data';

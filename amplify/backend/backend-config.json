@@ -1,6 +1,6 @@
 {
   "api": {
-    "api94aba13c": {
+    "api340d2441": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "hriwebsitea5dbf93e"
+          "resourceName": "hriwebsite4eade50d"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,28 +16,48 @@
     }
   },
   "function": {
-    "hriwebsitea5dbf93e": {
+    "hriwebsite4eade50d": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamoa4c5b099"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_hriwebsitea5dbf93e_deploymentBucketName": {
+    "AMPLIFY_function_hriwebsite4eade50d_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "hriwebsitea5dbf93e"
+          "resourceName": "hriwebsite4eade50d"
         }
       ]
     },
-    "AMPLIFY_function_hriwebsitea5dbf93e_s3Key": {
+    "AMPLIFY_function_hriwebsite4eade50d_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "hriwebsitea5dbf93e"
+          "resourceName": "hriwebsite4eade50d"
         }
       ]
+    }
+  },
+  "storage": {
+    "dynamoa4c5b099": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

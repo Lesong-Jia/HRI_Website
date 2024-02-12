@@ -59,7 +59,7 @@ export default {
       gameCode: "",
       miss: false,
       gameInfo: {
-        src: "/unity/Scenario_Tutorial/index.html",
+        src: "/Scenario_Tutorial/index.html",
         code: "ST0BC",
       },
     };
