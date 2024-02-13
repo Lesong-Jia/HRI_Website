@@ -50,7 +50,8 @@
 </template>
 
 <script>
-import preventBack from "vue-prevent-browser-back"; //组件内单独引入
+import preventBack from "vue-prevent-browser-back"; //组件内单独引入  
+import axios from 'axios';
 
 export default {
   mixins: [preventBack], //注入  阻止返回上一页
@@ -59,7 +60,7 @@ export default {
       gameCode: "",
       miss: false,
       gameInfo: {
-        src: "/Scenario_Tutorial/index.html",
+        src: "/unity/UnitySendMessageTest8/index.html",
         code: "ST0BC",
       },
     };
@@ -67,7 +68,14 @@ export default {
   computed: {},
   mounted() {
     window.scrollTo(0, 0);
+    //forreveiveData
+    window.addEventListener('message', this.receiveMessage, false);
   },
+  //for receiveData
+  beforeDestroy() {
+    window.removeEventListener('message', this.receiveMessage);
+  },
+
   methods: {
     gotoNext() {
       if (this.gameCode.trim() !== this.gameInfo.code) {
@@ -76,8 +84,38 @@ export default {
         this.$router.push("/gameExperience");
       }
     },
+    //for receivedata
+    async receiveMessage(event) {
+      let parsedData;
+      try {
+        parsedData = JSON.parse(event.data);
+        console.log(parsedData);
+      } catch (e) {
+        console.error("Failed to parse the received message:", e);
+        return; // Exit the method early if parsing fails
+      }
+      console.log(event.data);
+      this.$store.commit("SET_ALL_QUESTION_FORM", {
+        ...this.allQuestionForm,
+        ...parsedData, // Merge parsed data with existing form data
+      });
+      const options = {
+        method: 'POST',
+        url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
+        headers: {'content-type': 'application/json'},
+        data: {...this.allQuestionForm}
+      };
+
+      try {
+        const { data } = await axios.request(options);
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
   },
 };
+
 </script>
 
 <style lang="less" scoped>

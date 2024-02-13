@@ -21,6 +21,7 @@ import moment from "moment";
 import { mapGetters } from "vuex";
 import consent from "./components/consent.vue";
 import instruction from "./components/instruction.vue";
+import axios from 'axios';
 
 export default {
   components: { instruction, consent },
@@ -49,9 +50,21 @@ export default {
     setupUnityListener() {
       window.addEventListener('UnityMessage', this.handleUnityMessage);
     },
-    handleUnityMessage(event) {
-      var data = JSON.parse(event.detail);
+    async handleUnityMessage(event) {
       this.$store.commit('SET_ALL_QUESTION_FORM', data);
+      const options = {
+        method: 'POST',
+        url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
+        headers: {'content-type': 'application/json'},
+        data: {...this.allQuestionForm}
+      };
+      
+      try {
+        const response = await axios.request(options);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     },
     setIsPass() {
       this.$store.commit("SET_IS_PASS", false);
@@ -66,7 +79,7 @@ export default {
         this.$store.commit("SET_ALL_QUESTION_FORM", {
           ParticipantID: uniqueId,
         });
-        this.$router.push("/startQuestionnaire");
+        this.$router.push("/scenarioTutorial");
       }
     },
     // unity发送事件执行

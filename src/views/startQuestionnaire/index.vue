@@ -87,7 +87,6 @@ import preventBack from "vue-prevent-browser-back"; //组件内单独引入
 import { allQuestList } from "./tool";
 import { getRandomValue, allGameArr } from "../../unit/tool";
 import api from "@/api/index.js";
-import axios from 'axios';
 
 export default {
   mixins: [preventBack], //注入  阻止返回上一页
@@ -136,7 +135,7 @@ export default {
       });
     },
     handleSubmit() {
-      this.$refs["form"].validate(async (valid) => {
+      this.$refs["form"].validate((valid) => {
         if (!valid) {
           return;
         }
@@ -155,7 +154,6 @@ export default {
           ...this.allQuestionForm,
           startQuestionnaire: { ...this.form },
         });
-        
         // 进入游戏一 ，改变步骤状态，随机游戏界面，进入选择题页
         this.$store.commit("SET_GAME_STEP", startValue);
         this.$store.commit("SET_QUES_STEP", 1);

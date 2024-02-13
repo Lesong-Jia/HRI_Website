@@ -18,6 +18,23 @@
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->
+  <!-- <script>
+    // 定义Unity调用的JavaScript函数
+    console.log("Before UnityMessage function declaration");
+
+    function UnityMessage(jsonData) {
+      // 解析传递的JSON数据（如果Unity发送的是JSON字符串）
+      var data = JSON.parse(jsonData);
+
+      // 创建一个自定义事件并附带从Unity接收的数据
+      var event = new CustomEvent('UnityMessage', { detail: data });
+
+      // 在window对象上派发事件
+      window.dispatchEvent(event);
+    }
+    console.log("After UnityMessage function declaration");
+
+  </script> -->
 </body>
 
 </html>
