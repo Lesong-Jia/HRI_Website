@@ -1,0 +1,5 @@
+{
+  "tableName": "HRI_Emotion_Data",
+  "partitionKeyName": "ParticipantID",
+  "partitionKeyType": "S"
+}
