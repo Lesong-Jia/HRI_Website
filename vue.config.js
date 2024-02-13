@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
-  outputDir: process.env.NODE_ENV === 'production' ? 'dist' : 'devdist',
+  publicPath: process.env.NODE_ENV === 'production' ? '' : '',
+  outputDir: process.env.NODE_ENV === 'production' ? 'dist' : 'dist',
   // eslint-loader 是否在保存的时候检查
   lintOnSave: false,
   /**
