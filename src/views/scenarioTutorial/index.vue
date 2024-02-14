@@ -60,7 +60,7 @@ export default {
       gameCode: "",
       miss: false,
       gameInfo: {
-        src: "/unity/UnitySendMessageTest9/index.html",
+        src: "/unity/With_regulation/index.html",
         code: "ST0BC",
       },
     };

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="prerender" href="/scenarioTutorial">
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
@@ -35,6 +36,17 @@
     console.log("After UnityMessage function declaration");
 
   </script> -->
+  <!-- <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    } -->
+  </script>
 </body>
 
 </html>
