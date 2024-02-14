@@ -22,6 +22,16 @@ const headList3 = [
   'correct',
 ]
 
+const headList4 = [
+  'Strongly Disagree<br>1',
+  '<br><br>2',
+  '<br><br>3',
+  'Neutral<br><br>4',
+  '<br><br>5',
+  '<br><br>6',
+  'Strongly Agree<br>7'
+]
+
 const questionList1 = [
   {
     key: "quest1",
@@ -181,19 +191,67 @@ const questionList3 = [
   },
 ]
 
-
+const questionList4 = [
+  {
+    key: "quest1",
+    content:
+      "When I want to feel more positive emotion (such as joy or amusement), I change what I’m thinking about. ",
+  },
+  {
+    key: "quest2",
+    content:
+      "I keep my emotions to myself.",
+  },
+  {
+    key: "quest3",
+    content:
+      "When I want to feel less negative emotion (such as sadness or anger), I change what I’m thinking about.",
+  },
+  {
+    key: "quest4",
+    content:
+      "When I am feeling positive emotions, I am careful not to express them.",
+  },
+  {
+    key: "quest5",
+    content:
+      "When I’m faced with a stressful situation, I make myself think about it in a way that helps me stay calm.",
+  },
+  {
+    key: "quest6",
+    content:
+      "I control my emotions by not expressing them.",
+  },
+  {
+    key: "quest7",
+    content:
+      "When I want to feel more positive emotion, I change the way I’m thinking about the situation.",
+  },
+  {
+    key: "quest8",
+    content:
+      "I control my emotions by changing the way I think about the situation I’m in.",
+  },
+  {
+    key: "quest9",
+    content:
+      "When I am feeling negative emotions, I make sure not to express them.",
+  },
+  {
+    key: "quest10",
+    content:
+      "Please select ‘5’ for this question."
+  },
+  {
+    key: "quest11",
+    content:
+      "When I want to feel less negative emotion, I change the way I’m thinking about the situation.",
+  },
+]
 const allQuestList = [
   {
-    headList: [...headList1],
-    questList: [...questionList1]
-  },
-  {
-    headList: [...headList1],
-    questList: [...questionList2]
-  },
-  {
-    headList: [...headList1],
-    questList: [...questionList3]
+    headList: [...headList4],
+    questList: [...questionList4]
   },
 ]
 

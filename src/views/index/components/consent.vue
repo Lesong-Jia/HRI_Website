@@ -4,40 +4,33 @@
       <strong> Consent Form </strong>
     </p>
     <p>
-      We are asking you to participate in a research study titled “Understanding
-      Privacy Attitudes in the Metaverse Across Contexts”. We will describe this
-      study to you and answer any of your questions. This study is being led by
+      We are asking you to participate in a research study titled “Investigating Emotion Regulation in Human-AI Team”. 
+      We will describe this study to you and answer any of your questions. This study is being led by
       a HCI research team of the School of Information Science at University of
       Pittsburgh.
     </p>
     <br />
     <strong> Study Aims: </strong>
     <p>
-      The purpose of this study is to measure participants’ subjective
-      behaviors, personal data disclosure intentions and decision, and attitudes
-      towards privacy policy and potential privacy risks of Virtual Reality
-      Applications.
+      This research project is a survey-based study designed to explore the impact of emotion regulation on human-AI collaboration within smart cities. 
+      The central question it seeks to answer is: To what extent does emotion regulation influence the quality of human-AI teaming? 
+      The primary objectives are to investigate how different emotional states and emotion regulation affect decision-making, task performance, and teamwork in human-AI interactions. 
     </p>
     <br />
     <strong> Study Procedures: </strong>
     <p>
-      In the study you will be asked to perform the three following tasks:<br />
+      In the study you will be asked to perform the two following tasks:<br />
     </p>
     <ol>
       <li>
         Complete a series of pre-game survey questions, which assess your
-        general attitudes towards the data collection and privacy policy of
-        Virtual Reality Platforms.
+        emotion regulation habits.
       </li>
       <li>
-        Experience an adversarial game or watch videos which present different
-        privacy-related scenarios. These scenarios simulate real-life privacy
-        challenges you may have encountered while using Virtual Reality
-        services.
-      </li>
-      <li>
-        3.Complete a series of post-game survey questions, which assess your
-        attitudes, and privacy disclosure decisions towards each scenario.
+        Experience an adversarial game or watch videos that present different life scenarios. 
+        You will play the role of a babysitter in the game, 
+        experiencing situations that may occur while taking care of children, 
+        and answer corresponding questionnaires.
       </li>
     </ol>
     The duration of the study should be approximately 30 minutes.<br />
@@ -97,8 +90,8 @@
     <p>
       You may contact the research team at
       <span style="text-decoration: underline"
-        ><a href="mailto:bey14@pitt.edu" target="_parent"
-          >bey14@pitt.edu</a
+        ><a href="mailto:lej50@pitt.edu" target="_parent"
+          >lej50@pitt.edu</a
         ></span
       >
       for additional information.

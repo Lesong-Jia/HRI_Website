@@ -3,12 +3,13 @@
     <div class="pre-study">
       <p><strong>Part 1 - Pre-study Questions:</strong></p>
       <p>
-         <strong
-          >Please indicate to what extent you agree with the following
-          statements.</strong
-        >
+        We would like to ask you some questions about your emotional life, in particular, how you control (that is, regulate and manage) your emotions.
+        The questions below involvetwo distinct aspects of your emotional life. 
+        One is your emotional experience, or what you feel like inside. 
+        The other is your emotional expression, or how you show you emotions in the way you talk, gesture, or behave. 
+        Although some of the following questions may seem similar to one another, they differ in important ways.
       </p>
-      <p>
+      <!-- <p>
         There are questions which require you to
         <strong>select the specific answer indicated in the question</strong>.
         If you <strong>failed to select the specific answer</strong> as required
@@ -16,7 +17,7 @@
         <strong
           >be terminated. You will not be compensated for the study.</strong
         >
-      </p>
+      </p> -->
     </div>
     <div class="content">
       <a-form-model
@@ -35,9 +36,10 @@
           <table border="0" width="100%" align="center">
             <tr class="head">
               <td style="border-right: 1px solid #efefef"></td>
-              <td v-for="headItem in tableItem.headList" :key="headItem">
+              <td v-for="headItem in tableItem.headList" :key="headItem" v-html="headItem"></td>
+              <!-- <td v-for="headItem in tableItem.headList" :key="headItem">
                 {{ headItem }}
-              </td>
+              </td> -->
             </tr>
             <tr v-for="(item, index) in tableItem.questList" :key="index">
               <a-form-model-item
@@ -97,8 +99,6 @@ export default {
       loading: false,
       form: {
         table0: {},
-        table1: {},
-        table2: {},
       },
       radioStyle: {
         display: "block",
@@ -124,15 +124,27 @@ export default {
   },
   methods: {
     setGameGroupType() {
-      api.getIndex().then((res) => {
-        if (res.code === 200) {
-          this.$store.commit("SET_GAME_GROUP_TYPE", res.data);
-          this.$store.commit(
-            "SET_GAME_ARR_LIST",
-            allGameArr[this.gameGroupType]
-          );
-        }
-      });
+      const grouptype = Math.floor(Math.random() * (4)) + 1;;
+      this.$store.commit("SET_GAME_GROUP_TYPE", grouptype);
+      this.$store.commit(
+        "SET_GAME_ARR_LIST",
+        allGameArr[this.gameGroupType]
+      );
+      // console.log(23333);  
+      // console.log(this.gameGroupType);  
+
+      // api.getIndex().then((res) => {
+      //   console.log(23333);  
+      //   if (res.code === 200) {
+      //     this.$store.commit("SET_GAME_GROUP_TYPE", res.data);
+      //     this.$store.commit(
+      //       "SET_GAME_ARR_LIST",
+      //       allGameArr[this.gameGroupType]
+      //     );
+      //     console.log(23333);  
+      //     console.log(this.gameGroupType);  
+      //   }
+      // });
     },
     handleSubmit() {
       this.$refs["form"].validate((valid) => {
@@ -140,8 +152,9 @@ export default {
           return;
         }
         this.loading = true;
-        if (this.form.table1.quest11 !== 5) {
-          this.passUser();
+        if (this.form.table0.quest10 !== 5) {
+          this.$router.push("/last_fail");
+          // this.passUser();
           return;
         }
         // 获取数组中一个随机值

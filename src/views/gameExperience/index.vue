@@ -30,7 +30,7 @@
 <script>
 import { mapGetters } from "vuex";
 import preventBack from "vue-prevent-browser-back"; //组件内单独引入
-
+import { getRandomValue } from "../../unit/tool";
 export default {
   mixins: [preventBack], //注入  阻止返回上一页
   data() {
@@ -48,51 +48,38 @@ export default {
             src: "/unity/group1/Scenario_2/index.html",
             code: "S2BANS",
           },
-          3: {
-            src: "/unity/group1/Scenario_3/index.html",
-            code: "S3GANP",
-          },
-          4: {
-            src: "/unity/group1/Scenario_4/index.html",
-            code: "S6BNW",
-          },
         },
         // 第二组
         {
-          5: {
-            src: "/unity/group2/Scenario_5/index.html",
+          3: {
+            src: "/unity/group2/Scenario_3/index.html",
             code: "S5PSNP",
           },
-          6: {
-            src: "/unity/group2/Scenario_6/index.html",
+          4: {
+            src: "/unity/group2/Scenario_4/index.html",
             code: "S6SENR",
-          },
-          7: {
-            src: "/unity/group2/Scenario_7/index.html",
-            code: "S7SENH",
-          },
-          8: {
-            src: "/unity/group2/Scenario_8/index.html",
-            code: "S8AUNB",
           },
         },
         //第三组
         {
-          9: {
-            src: "/unity/group3/Scenario_9/index.html",
+          5: {
+            src: "/unity/group3/Scenario_5/index.html",
             code: "S9PDNM",
           },
-          10: {
-            src: "/unity/group3/Scenario_10/index.html",
+          6: {
+            src: "/unity/group3/Scenario_6/index.html",
             code: "S10PDAN",
           },
-          11: {
-            src: "/unity/group3/Scenario_11/index.html",
-            code: "S11BNBO",
+        },
+        //第四组
+        {
+          7: {
+            src: "/unity/group3/Scenario_7/index.html",
+            code: "S8KDNM",
           },
-          12: {
-            src: "/unity/group3/Scenario_12/index.html",
-            code: "S12BHNM",
+          8: {
+            src: "/unity/group3/Scenario_8/index.html",
+            code: "SP5DAN",
           },
         },
       ],
@@ -115,7 +102,21 @@ export default {
       ) {
         this.miss = true;
       } else {
-        this.$router.push("/questionnaire");
+        const nextArr = this.gameArrList.filter(
+          (item) => item !== this.gameStep
+        );
+        if (nextArr.length) {
+          const nextValue = getRandomValue(nextArr);
+          this.$store.commit("SET_GAME_STEP", nextValue);
+        }
+        this.$store.commit("SET_GAME_ARR_LIST", nextArr);
+        this.$store.commit("SET_QUES_STEP", this.quesStep + 1);
+        //判断是不是最后一个游戏
+        if (this.quesStep <= 2) {
+          this.$router.push("/gameExperience");
+        } else {
+          this.$router.push("/last_finish");
+        }
       }
     },
   },

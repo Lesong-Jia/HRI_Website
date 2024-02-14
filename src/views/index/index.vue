@@ -79,7 +79,7 @@ export default {
         this.$store.commit("SET_ALL_QUESTION_FORM", {
           ParticipantID: uniqueId,
         });
-        this.$router.push("/scenarioTutorial");
+        this.$router.push("/startQuestionnaire");
       }
     },
     // unity发送事件执行

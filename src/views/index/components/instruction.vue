@@ -2,18 +2,14 @@
   <div class="ins-wrapper">
     <strong>Introduction</strong>
     <br />
-    <p>In the survey, you will complete <strong>three major tasks:</strong></p>
+    <p>In the survey, you will complete <strong>two major tasks:</strong></p>
     <ol>
       <li>
         Complete a set of pre-study questions based on your previous experience.
       </li>
       <li>
-        Experience <span style="color: red">four</span> first-person perspective
-        games and complete a set of corresponding questions after each game.
-      </li>
-      <li>
-        Complete a set of post-study questions based on your general assessment
-        of scenarios you experience in the games.
+        Experience <span style="color: red">two</span> first-person perspective
+        games and complete a set of corresponding questions.
       </li>
     </ol>
     <br />
@@ -33,23 +29,15 @@
     <br />
     <ol>
       <li>18 years or older.</li>
-      <li>Currently resides in the United States.</li>
       <li>A fluent English speaker.</li>
-      <li>
-        Must have previous experience with Virtual Reality (VR) device or
-        service.
-      </li>
-      <li>Have no severe motion sickness.</li>
+      <li>Have auditory acuity (hearing aids are acceptable).</li>
+      <li>Normal or corrected-to-normal vision.</li>
     </ol>
     <br />
     <strong> Exclusion Criteria: </strong>
     <br />
     <ol>
-      <li>Currently resides outside of the United States.</li>
-      <li>
-        Have no previous experience with Virtual Reality (VR) device or service.
-      </li>
-      <li>Have severe motion sickness.</li>
+      <li>Known disorders or injuries that may affect your ability to use a computer tbdkeyboard, mouse, or video gamepad for up to 30 minutes at a time.</li>
     </ol>
     <p>
       <strong>

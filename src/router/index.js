@@ -42,9 +42,14 @@ const routes = [
     component: () => import("@/views/gameExperience/index.vue"),
   },
   {
-    path: "/last",
-    name: "last",
-    component: () => import("@/views/last/index.vue"),
+    path: "/last_finish",
+    name: "last_finish",
+    component: () => import("@/views/last_finish/index.vue"),
+  },
+  {
+    path: "/last_fail",
+    name: "last_fail",
+    component: () => import("@/views/last_fail/index.vue"),
   },
   {
     path: "/lastQuestionnaire",

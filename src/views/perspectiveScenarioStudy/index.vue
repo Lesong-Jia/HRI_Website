@@ -4,62 +4,25 @@
       <p><strong>Part 2 - First Person Perspective Scenario Study: </strong></p>
       <p>
         You will experience
-        <strong>4 first-person perspective scenarios through games</strong>,
-        which simulate real-life privacy challenges you might encounter while
-        using Virtual Reality (VR) applications and services. 
+        <strong>2 first-person perspective scenarios through games</strong>,
+        which simulate real-life challenges you might encounter while
+        takecare a children as a babysitter. <br>
       </p>
       <p>
-        After each scenario, you are required to
+        For each scenario, you are required to
         <strong>complete a set of corresponding questions</strong> based on
-        <strong>your experience in the game</strong>.
+        <strong>your experience in the game</strong>.<br>
       </p>
-      <p>After entering the scenario in each game, you should be able to:</p>
-      <ul>
-        <li>
-          Move around the room with the Left/Right and Up/Down arrow keys on
-          your keyboard.
-        </li>
-        <li>
-          Interact
-          with <strong>objects</strong> and <strong>characters</strong> within
-          the room, <strong>following instructions</strong> given during the
-          game.
-        </li>
-        <li>
-          Provide an <strong>Correct Answer</strong> to the multiple choice
-          question at the end of each game to proceed to the next scene. The
-          multiple choice questions aim to help you understand key information
-          in each scenario. Each scenario is expected to have 1 - 2 multiple
-          choice questions.
-        </li>
-        <li>
-          If you provide an <strong>Incorrect Answer</strong> to the multiple
-          choice question at the end each game, the game will
-          be <strong>terminated</strong>: you have to refresh the game window
-          and start from the beginning. Your game progress will not be recorded.
-        </li>
-        <li>
-          When you reached the end of each scenario,
-          a <strong>Code</strong> will appear on the center of the screen. You
-          should enter the <strong>Code</strong> on Qualtrics to proceed to the
-          next step of this study.
-        </li>
-      </ul>
+      <p>When you reached the end of each scenario,
+        a <strong>Code</strong> will appear on the center of the screen. You
+        should enter the <strong>Code</strong> in the input box below the game window to proceed to the
+        next step of this study.<br></p>
       <p>
         <strong
-          >While playing the game, envision yourself as the player in
+          >While playing the game, envision yourself as the babysitter in
           first-person perspective and consider the scenario in each game as if
           it is happening in your actual life.</strong
-        >
-      </p>
-      <p>
-        On the next page, you will experience <strong
-          >1 tutorial scenario</strong
-        > to help you practice tasks described above. The tutorial scenario
-        <strong
-          > does not count towards the four first-person perspective
-          scenarios</strong
-        > for this study.
+        ><br>
       </p>
       <p>
         Before you proceed, please provide the <strong
@@ -79,8 +42,7 @@
       >
         <p>
           <strong
-            >How many scenarios in total you will encounter in this part of the
-            study?</strong
+            >In the game, what role will you play as?</strong
           >
         </p>
         <a-form-model-item
@@ -113,41 +75,6 @@
           </a-radio-group>
         </a-form-model-item>
         <p class="line-p"></p>
-        <p>
-          <strong
-            >What would happen if you provide an incorrect answer to the
-            multiple choice question in the game?</strong
-          >
-        </p>
-        <a-form-model-item
-          prop="itemTwo"
-          :rules="[
-            {
-              required: true,
-              pattern: /^A$/,
-              message: 'Your answer to this question is incorrect!',
-              trigger: 'blur',
-            },
-          ]"
-        >
-          <a-radio-group v-model="form.itemTwo">
-            <a-radio
-              :class="
-                form.itemTwo === item.value
-                  ? 'radio-check radio-active'
-                  : 'radio-check'
-              "
-              :style="radioStyle"
-              v-for="item in radioList[1].list"
-              :value="item.value"
-              :key="item.value"
-            >
-              <span :style="form.itemTwo === item.value ? 'color:#fff' : ''">{{
-                item.value + ". " + item.ques
-              }}</span>
-            </a-radio>
-          </a-radio-group>
-        </a-form-model-item>
       </a-form-model>
     </div>
     <div class="input-wrapper">
@@ -168,15 +95,15 @@ const radioList = [
     answser: "B",
     list: [
       {
-        ques: "4 Scenarios: four first-person perspective scenarios in games",
+        ques: "I will play the role of a child.",
         value: "A",
       },
       {
-        ques: "5 Scenarios: one tutorial scenario + four first-person perspective scenarios in games",
+        ques: "I will play the role of a babysitter.",
         value: "B",
       },
       {
-        ques: "4 Scenarios: one tutorial scenario + three first-person perspective scenarios in games",
+        ques: "I will play the role of a observer.",
         value: "C",
       },
     ],
@@ -235,7 +162,7 @@ export default {
         if (!valid) {
           return;
         }
-        this.$router.push("/scenarioTutorial");
+        this.$router.push("/gameExperience");
       });
     },
     changeLoading(value) {

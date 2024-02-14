@@ -1,10 +1,9 @@
 <template>
   <div class="wrapper">
-    <p v-if="type === 'goBack'">
+    <p>
       You selected the wrong answer for the attention check question, the study
       was terminated. Your response will not be recorded
     </p>
-    <p v-else>Thank you for participating</p>
   </div>
 </template>
 <script>
