@@ -7,7 +7,7 @@
         @ended="onVideoEnded" 
         controls autoplay 
         style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10;">
-        <source :src="gameStep === 1 ? 'Video/Cryboy.mp4' : 'Video/Celebration.mp4'" type="video/mp4">
+        <source :src="gameStep % 2 === 0 ? 'Video/Cryboy.mp4' : 'Video/Celebration.mp4'" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>

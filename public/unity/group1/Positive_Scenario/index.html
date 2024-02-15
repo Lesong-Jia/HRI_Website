@@ -24,6 +24,20 @@
       </div>
     </div>
     <script>
+      function handleReceivedData(jsonData) {
+          // 解析收到的 JSON 数据
+          var jsonString = JSON.stringify(jsonData);
+
+          var data = JSON.parse(jsonString);
+
+              // 处理收到的数据
+          console.log(data.N); // 打印收到的 N 属性值
+
+          const dataString = JSON.stringify(data);
+
+          // 向父窗口发送消息，传递接收到的数据的字符串形式
+          window.parent.postMessage(dataString, "*");
+      }
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
