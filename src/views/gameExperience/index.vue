@@ -1,10 +1,20 @@
 <template>
   <div class="wrapper">
+        <!-- Video overlay -->
+    <div class="video-overlay" v-if="showVideo">
+      <video 
+        id="overlayVideo" 
+        @ended="onVideoEnded" 
+        controls autoplay 
+        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10;">
+        <source :src="gameStep === 1 ? 'Video/Cryboy.mp4' : 'Video/Celebration.mp4'" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
     <div class="game-box">
-      <!-- <p class="tips-p">
-        第{{ this.gameGroupType + 1 }}组，游戏嵌入界面,第{{ gameStep }}个游戏
-      </p> -->
       <iframe
+        v-show="!showVideo"
         id="unity"
         ref="unity"
         :src="group[gameGroupType][gameStep]?.src"
@@ -31,6 +41,8 @@
 import { mapGetters } from "vuex";
 import preventBack from "vue-prevent-browser-back"; //组件内单独引入
 import { getRandomValue } from "../../unit/tool";
+import axios from 'axios';
+
 export default {
   mixins: [preventBack], //注入  阻止返回上一页
   data() {
@@ -41,48 +53,49 @@ export default {
         // 第一组
         {
           1: {
-            src: "/unity/group1/Scenario_1/index.html",
-            code: "S1ANP",
+            src: "/unity/group1/Positive_Scenario/index.html",
+            code: "OY5FD",
           },
           2: {
-            src: "/unity/group1/Scenario_2/index.html",
-            code: "S2BANS",
+            src: "/unity/group1/Negative_Scenario/index.html",
+            code: "ST0BC",
           },
         },
         // 第二组
         {
           3: {
-            src: "/unity/group2/Scenario_3/index.html",
+            src: "/unity/group1/Positive_Scenario/index.html",
             code: "S5PSNP",
           },
           4: {
-            src: "/unity/group2/Scenario_4/index.html",
-            code: "S6SENR",
+            src: "/unity/group1/Negative_Scenario/index.html",
+            code: "ST0BC",
           },
         },
         //第三组
         {
           5: {
-            src: "/unity/group3/Scenario_5/index.html",
+            src: "/unity/group1/Positive_Scenario/index.html",
             code: "S9PDNM",
           },
           6: {
-            src: "/unity/group3/Scenario_6/index.html",
-            code: "S10PDAN",
+            src: "/unity/group1/Negative_Scenario/index.html",
+            code: "ST0BC",
           },
         },
         //第四组
         {
           7: {
-            src: "/unity/group3/Scenario_7/index.html",
+            src: "/unity/group1/Positive_Scenario/index.html",
             code: "S8KDNM",
           },
           8: {
-            src: "/unity/group3/Scenario_8/index.html",
-            code: "SP5DAN",
+            src: "/unity/group1/Negative_Scenario/index.html",
+            code: "ST0BC",
           },
         },
       ],
+      showVideo: true, // 控制视频的显示
     };
   },
   computed: {
@@ -90,12 +103,34 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    window.addEventListener('message', this.receiveMessage, false);
     console.log(
       ` 第${this.gameGroupType + 1}组，游戏嵌入界面,第${this.gameStep}个游戏`
     );
   },
+  beforeDestroy() {
+    window.removeEventListener('message', this.receiveMessage);
+  },
   methods: {
-    gotoNext() {
+    onVideoEnded() {
+      this.showVideo = false; // 视频播放完毕，隐藏视频并显示游戏
+    },
+    receiveMessage(event) {
+      let parsedData;
+      try {
+        parsedData = JSON.parse(event.data);
+        console.log(parsedData);
+      } catch (e) {
+        console.error("Failed to parse the received message:", e);
+        return; // Exit the method early if parsing fails
+      }
+      console.log(event.data);
+      this.$store.commit("SET_ALL_QUESTION_FORM", {
+        ...this.allQuestionForm,
+        ...parsedData, // Merge parsed data with existing form data
+      });
+    },
+    async gotoNext() {
       this.gameCode = this.gameCode.trim();
       if (
         this.gameCode !== this.group[this.gameGroupType][this.gameStep]?.code
@@ -113,9 +148,22 @@ export default {
         this.$store.commit("SET_QUES_STEP", this.quesStep + 1);
         //判断是不是最后一个游戏
         if (this.quesStep <= 2) {
+          this.showVideo =true;
           this.$router.push("/gameExperience");
         } else {
           this.$router.push("/last_finish");
+          const options = {
+            method: 'POST',
+            url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
+            headers: {'content-type': 'application/json'},
+            data: {...this.allQuestionForm}
+          };
+          try {
+            const { data } = await axios.request(options);
+            console.log(data);
+          } catch (error) {
+            console.error(error);
+          }
         }
       }
     },

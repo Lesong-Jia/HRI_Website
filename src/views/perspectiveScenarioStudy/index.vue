@@ -13,6 +13,7 @@
         <strong>complete a set of corresponding questions</strong> based on
         <strong>your experience in the game</strong>.<br>
       </p>
+      <p>Before starting each game you need to watch a video related to the game plot.<br></p>
       <p>When you reached the end of each scenario,
         a <strong>Code</strong> will appear on the center of the screen. You
         should enter the <strong>Code</strong> in the input box below the game window to proceed to the
