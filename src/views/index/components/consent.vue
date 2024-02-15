@@ -4,17 +4,17 @@
       <strong> Consent Form </strong>
     </p>
     <p>
-      We are asking you to participate in a research study titled “Investigating Emotion Regulation in Human-AI Team”. 
+      We are asking you to participate in our research study. 
       We will describe this study to you and answer any of your questions. This study is being led by
-      a HCI research team of the School of Information Science at University of
+      a HCI research team of the School of Computing and Information at University of
       Pittsburgh.
     </p>
     <br />
     <strong> Study Aims: </strong>
     <p>
-      This research project is a survey-based study designed to explore the impact of emotion regulation on human-AI collaboration within smart cities. 
-      The central question it seeks to answer is: To what extent does emotion regulation influence the quality of human-AI teaming? 
-      The primary objectives are to investigate how different emotional states and emotion regulation affect decision-making, task performance, and teamwork in human-AI interactions. 
+      This research project is a survey-based study designed to explore the human-AI collaboration within smart cities. 
+      <!-- The central question it seeks to answer is: To what extent does emotion regulation influence the quality of human-AI teaming? 
+      The primary objectives are to investigate how different emotional states and emotion regulation affect decision-making, task performance, and teamwork in human-AI interactions.  -->
     </p>
     <br />
     <strong> Study Procedures: </strong>
@@ -29,7 +29,7 @@
       <li>
         Experience an adversarial game or watch videos that present different life scenarios. 
         You will play the role of a babysitter in the game, 
-        experiencing situations that may occur while taking care of children, 
+        experiencing situations that may occur while taking care of a child, 
         and answer corresponding questionnaires.
       </li>
     </ol>
@@ -50,7 +50,7 @@
     </p>
     <br />
     <strong> Incentives for participation: </strong>
-    <p>You will be compensated with $3 for the 30 minutes study.</p>
+    <p>You will be compensated with $4 for the 30 minutes study.</p>
 
     <br />
     <strong> Privacy, Confidentiality, and Data Security: </strong>

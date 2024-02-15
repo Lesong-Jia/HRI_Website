@@ -6,7 +6,7 @@
         You will experience
         <strong>2 first-person perspective scenarios through games</strong>,
         which simulate real-life challenges you might encounter while
-        takecare a children as a babysitter. <br>
+        taking care of a child as a babysitter. <br>
       </p>
       <p>
         For each scenario, you are required to
