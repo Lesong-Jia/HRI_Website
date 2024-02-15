@@ -159,9 +159,7 @@ export default {
         }
         // 获取数组中一个随机值
         const startValue = getRandomValue(this.gameArrList);
-        console.log(this.gameArrList);
-        console.log(startValue);
-        console.log(this.allQuestionForm);
+
         // 保存第一次的问卷
         this.$store.commit("SET_ALL_QUESTION_FORM", {
           ...this.allQuestionForm,
