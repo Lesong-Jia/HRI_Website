@@ -3,7 +3,7 @@
     <div class="pre-study">
       <p><strong>You are about to enter a new scene, 
         where the robots appearing are of a different model from the previous ones. 
-        Please view it with a fresh perspective.
+        Please view them with a fresh perspective.
       </strong></p>
       <!-- <p>
         There are questions which require you to
