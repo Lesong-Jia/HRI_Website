@@ -58,26 +58,32 @@ const radioList2 = [
   "G. Prefer not to say"
 ]
 const radioList3 = [
-  "A. White or Caucasian",
-  "B. Black or African American",
-  "C. American Indian/Native American or Alaska Native",
-  "D. Asian",
-  "E. Native Hawaiian or Other Pacific Islander",
-  "F. Other",
-  "G. Prefer not to say"
+  "A. Very Unwilling",
+  "B. Somewhat Unwilling",
+  "C. Neutral",
+  "D. Somewhat Willing",
+  "E. Very Willing",
 ]
 const radioList4 = [
-  "A. 1 year or less ",
-  "B. 1 - 2 years",
-  "C. 2 - 3 years",
-  "D. more than 3 years"
+  "A. Very Low",
+  "B. Low",
+  "C. Moderate",
+  "D. High",
+  "E. Very High",
 ]
 const radioList5 = [
-  "A. Daily",
-  "B. Weekly",
-  "C. Monthly",
-  "D. Every few months",
-  "E. Never"
+  "A. Never",
+  "B. Rarely",
+  "C. Sometimes",
+  "D. Often",
+  "E. Very Often",
+]
+const radioList6 = [
+  "A. Do Not Trust At All",
+  "B. Trust A Little",
+  "C. Neutral",
+  "D. Trust Somewhat",
+  "E. Completely Trust",
 ]
 export {
   questList,
@@ -85,5 +91,6 @@ export {
   radioList2,
   radioList3,
   radioList4,
-  radioList5
+  radioList5,
+  radioList6
 }

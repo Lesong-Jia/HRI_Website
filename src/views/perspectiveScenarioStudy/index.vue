@@ -161,9 +161,10 @@ export default {
     handleSubmit() {
       this.$refs["form"].validate((valid) => {
         if (!valid) {
+          this.$router.push("/last_fail");
           return;
         }
-        this.$router.push("/gameExperience");
+        this.$router.push("/scenarioTutorial");
       });
     },
     changeLoading(value) {

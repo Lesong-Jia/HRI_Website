@@ -2,13 +2,6 @@
   <div class="wrapper">
     <div class="pre-study">
       <p><strong>Part 1 - Pre-study Questions:</strong></p>
-      <p>
-        We would like to ask you some questions about your emotional life, in particular, how you control (that is, regulate and manage) your emotions.
-        The questions below involvetwo distinct aspects of your emotional life. 
-        One is your emotional experience, or what you feel like inside. 
-        The other is your emotional expression, or how you show you emotions in the way you talk, gesture, or behave. 
-        Although some of the following questions may seem similar to one another, they differ in important ways.
-      </p>
       <!-- <p>
         There are questions which require you to
         <strong>select the specific answer indicated in the question</strong>.
@@ -33,6 +26,26 @@
           :key="tableIndex"
           class="table-wrapper"
         >
+          <p v-if="tableIndex === 0">
+              We would like to ask you some questions about your emotional life, 
+              in particular, how you control (that is, regulate and manage) your emotions. 
+              Please select to which extent you agree or disagree with the following statements.
+              </p>
+              <p v-else-if="tableIndex === 2">
+                <br><br>
+                We would like to ask you some questions about your risk propensity. 
+                Please select to which extent you agree or disagree with the following statements.
+              </p>
+              <p v-else-if="tableIndex === 1">
+                <br><br>
+                We would like to ask you some questions about your attitude to social robots. 
+                Please select to which extent you agree or disagree with the following statements.
+              </p>
+              <p v-else-if="tableIndex === 3">
+                <br><br>
+                We would like to ask you some questions about your empathy. 
+                Please select to which extent you agree or disagree with the following statements.
+          </p>
           <table border="0" width="100%" align="center">
             <tr class="head">
               <td style="border-right: 1px solid #efefef"></td>
@@ -70,6 +83,7 @@
             </tr>
           </table>
         </div>
+        
       </a-form-model>
     </div>
     <div class="input-wrapper">
@@ -87,6 +101,9 @@
 <script>
 import preventBack from "vue-prevent-browser-back"; //组件内单独引入
 import { allQuestList } from "./tool";
+import { allQuestList2 } from "./tool";
+import { allQuestList3 } from "./tool";
+import { allQuestList4 } from "./tool";
 import { getRandomValue, allGameArr } from "../../unit/tool";
 import api from "@/api/index.js";
 
@@ -99,6 +116,9 @@ export default {
       loading: false,
       form: {
         table0: {},
+        table1: {},
+        table2: {},
+        table3: {},
       },
       radioStyle: {
         display: "block",
@@ -124,27 +144,12 @@ export default {
   },
   methods: {
     setGameGroupType() {
-      const grouptype = Math.floor(Math.random() * (4)) + 1;;
+      const grouptype = Math.floor(Math.random() * (4));;
       this.$store.commit("SET_GAME_GROUP_TYPE", grouptype);
       this.$store.commit(
         "SET_GAME_ARR_LIST",
         allGameArr[this.gameGroupType]
       );
-      // console.log(23333);  
-      // console.log(this.gameGroupType);  
-
-      // api.getIndex().then((res) => {
-      //   console.log(23333);  
-      //   if (res.code === 200) {
-      //     this.$store.commit("SET_GAME_GROUP_TYPE", res.data);
-      //     this.$store.commit(
-      //       "SET_GAME_ARR_LIST",
-      //       allGameArr[this.gameGroupType]
-      //     );
-      //     console.log(23333);  
-      //     console.log(this.gameGroupType);  
-      //   }
-      // });
     },
     handleSubmit() {
       this.$refs["form"].validate((valid) => {

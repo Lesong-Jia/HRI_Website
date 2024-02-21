@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper question" v-if="!this.forbidden">
     <!-- <p>游戏嵌入界面</p> -->
-    <div class="process-box" v-if="active === 1"><instruction /></div>
-    <div class="process-box" v-if="active === 2"><consent /></div>
+    <div class="process-box" v-if="active === 2"><instruction /></div>
+    <div class="process-box" v-if="active === 1"><consent /></div>
     <div class="input-wrapper">
       <a-button type="primary" shape="round" @click="gotoNext"
         >{{ active === 2 ? "Confirm" : "Proceed" }}
@@ -79,7 +79,7 @@ export default {
         this.$store.commit("SET_ALL_QUESTION_FORM", {
           ParticipantID: uniqueId,
         });
-        this.$router.push("/startQuestionnaire");
+        this.$router.push("/lastQuestionnaire");
       }
     },
     // unity发送事件执行

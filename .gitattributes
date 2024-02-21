@@ -1,3 +1,6 @@
 *.unityweb filter=lfs diff=lfs merge=lfs -text
 public/unity/group1/Negative_Scenario/Build/Positive_Scenario.data filter=lfs diff=lfs merge=lfs -text
 public/unity/group1/Positive_Scenario/Build/Positive_Scenario.data filter=lfs diff=lfs merge=lfs -text
+public/unity/group1/Negative_Scenario/Negative_Man_Regulation_Empathy.data filter=lfs diff=lfs merge=lfs -text
+public/unity/group1/Positive_Scenario/Positive_Man_Regulation_Empathy.data filter=lfs diff=lfs merge=lfs -text
+

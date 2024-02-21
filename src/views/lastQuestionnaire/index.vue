@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="content">
-      <stepOne ref="stepOne" v-if="active === 1" />
-      <stepTwo ref="stepTwo" v-if="active === 2" />
+      <stepOne ref="stepOne" v-if="active === 2" />
+      <stepTwo ref="stepTwo" v-if="active === 1" />
     </div>
     <div class="input-wrapper">
       <a-button
@@ -12,7 +12,7 @@
         :loading="loading"
         @click="handleSubmit"
       >
-        {{ active === 1 ? "Next" : "Submit" }}
+        {{ active === 1 ? "Next" : "Next" }}
       </a-button>
     </div>
   </div>
@@ -57,14 +57,6 @@ export default {
     handleSubmit() {
       const that = this;
       if (this.active === 1) {
-        this.$refs.stepOne.$refs["form"].validate(async (valid) => {
-          if (!valid) {
-            return;
-          }
-          this.form = { ...this.form, ...this.$refs.stepOne.form };
-          this.active = 2;
-        });
-      } else {
         this.$refs.stepTwo.$refs["form"].validate(async (valid) => {
           if (!valid) {
             return;
@@ -77,31 +69,63 @@ export default {
               this.$refs.stepTwo.form.radio1 + this.$refs.stepTwo.others;
           }
           this.form = { ...this.form, ...this.$refs.stepTwo.form };
-          console.log(this.form);
+          that.$store.commit("SET_ALL_QUESTION_FORM", {
+            ...that.allQuestionForm,
+            lastQuestionnaire: { ...that.form },
+            // endTime: moment().format("YYYY-MM-DD HH:mm:ss"),
+          });
+          this.$router.push("/startQuestionnaire");
+          
+        // this.$refs.stepOne.$refs["form"].validate(async (valid) => {
+        //   if (!valid) {
+        //     return;
+        //   }
+        //   this.form = { ...this.form, ...this.$refs.stepOne.form };
+          this.active = 2;
+        });
+      } else {
+          this.$refs.stepOne.$refs["form"].validate(async (valid) => {
+            if (!valid) {
+              return;
+            }
+            this.form = { ...this.form, ...this.$refs.stepOne.form };
+        // this.$refs.stepTwo.$refs["form"].validate(async (valid) => {
+        //   if (!valid) {
+        //     return;
+        //   }
+        //   if (this.$refs.stepTwo.isInputOthers) {
+        //     return;
+        //   }
+        //   if (this.$refs.stepTwo.form.radio1 === "D. Self describe:") {
+        //     this.$refs.stepTwo.form.radio1 =
+        //       this.$refs.stepTwo.form.radio1 + this.$refs.stepTwo.others;
+        //   }
+        //   this.form = { ...this.form, ...this.$refs.stepTwo.form };
+          
           //保存最后一次问卷
           that.$store.commit("SET_ALL_QUESTION_FORM", {
             ...that.allQuestionForm,
             lastQuestionnaire: { ...that.form },
             endTime: moment().format("YYYY-MM-DD HH:mm:ss"),
           });
-          that.loading = true;
-          const res = await api.submitForm({
-            ...that.allQuestionForm,
-            index: this.gameGroupType,
-          });
-          if (res.code === 200) {
-            that.$message.success("Submitted successfully");
-            this.$store.commit("SET_ALL_QUESTION_FORM", {});
-            this.$store.commit("SET_GAME_STEP", "");
-            this.$store.commit("SET_QUES_STEP", "");
-            this.$store.commit("SET_IS_PASS", true);
-            window.location.replace(
-              "https://connect.cloudresearch.com/participant/project/3f07c8e99a444971a2c7b16de468d483/complete"
-            );
-          } else {
-            that.loading = false;
-            that.$message.error(res.message);
-          }
+          // that.loading = true;
+          // const res = await api.submitForm({
+          //   ...that.allQuestionForm,
+          //   index: this.gameGroupType,
+          // });
+          // if (res.code === 200) {
+          //   that.$message.success("Submitted successfully");
+          //   this.$store.commit("SET_ALL_QUESTION_FORM", {});
+          //   this.$store.commit("SET_GAME_STEP", "");
+          //   this.$store.commit("SET_QUES_STEP", "");
+          //   this.$store.commit("SET_IS_PASS", true);
+          //   window.location.replace(
+          //     "https://connect.cloudresearch.com/participant/project/3f07c8e99a444971a2c7b16de468d483/complete"
+          //   );
+          // } else {
+          //   that.loading = false;
+          //   that.$message.error(res.message);
+          // }
         });
       }
     },

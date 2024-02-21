@@ -32,6 +32,21 @@ const headList4 = [
   'Strongly Agree<br>7'
 ]
 
+const headList5 = [
+  'Strongly Disagree<br>1',
+  '<br><br>2',
+  'Neutral<br><br>3',
+  '<br><br>4',
+  'Strongly Agree<br>5'
+]
+
+const headList6 = [
+  'Definitely Disagree',
+  'Slightly Disagree',
+  'Slightly Agree',
+  'Definitely Agree'
+]
+
 const questionList1 = [
   {
     key: "quest1",
@@ -248,13 +263,154 @@ const questionList4 = [
       "When I want to feel less negative emotion, I change the way I’m thinking about the situation.",
   },
 ]
+
+const questionList5 = [
+  {
+    key: "quest1",
+    content:
+      "I usually trust social robots until there is a reason not to.",
+  },
+  {
+    key: "quest2",
+    content:
+      "For the most part, I distrust social robots.",
+  },
+  {
+    key: "quest3",
+    content:
+      "In general, I would rely on a social robot to assist me.",
+  },
+  {
+    key: "quest4",
+    content:
+      "My tendency to trust social robots is high.",
+  },
+  {
+    key: "quest5",
+    content:
+      "It is easy for me to trust social robots to do their job."
+  },
+  {
+    key: "quest6",
+    content:
+      "I am likely to trust social robots even when I have little knowledge about them."
+  },
+]
+const questionList6 = [
+  {
+    key: "quest1",
+    content:
+      "Taking risks makes life more fun.",
+  },
+  {
+    key: "quest2",
+    content:
+      "My friends would say that I am a risk-taker.",
+  },
+  {
+    key: "quest3",
+    content:
+      "I enjoy taking risks in most aspects of my life.",
+  },
+  {
+    key: "quest4",
+    content:
+      "I would take a risk even if it meant I might get hurt.",
+  },
+  {
+    key: "quest5",
+    content:
+      "I commonly make risky decisions."
+  },
+  {
+    key: "quest6",
+    content:
+      "I am a believer in taking chances."
+  },
+  {
+    key: "quest7",
+    content:
+      "I am attracted to, rather than scared by risk."
+  },
+]
+const questionList7 = [
+  {
+    key: "quest1",
+    content:
+      "I find it easy to put myself in somebody else’s shoes.",
+  },
+  {
+    key: "quest2",
+    content:
+      "I am good at predicting how someone will feel.",
+  },
+  {
+    key: "quest3",
+    content:
+      "I am quick to spot when someone in a group is feeling awkward or uncomfortable.",
+  },
+  {
+    key: "quest4",
+    content:
+      "Other people tell me I am good at understanding how they are feeling and what they are thinking.",
+  },
+  {
+    key: "quest5",
+    content:
+      "I find it hard to know what to do in a social situation."
+  },
+  {
+    key: "quest6",
+    content:
+      "I often find it hard to judge if something is rude or polite."
+  },
+  {
+    key: "quest7",
+    content:
+      "It is hard for me to see why some things upset people so much."
+  },
+  {
+    key: "quest8",
+    content:
+      "Other people often say that I am insensitive, though I don’t always see why."
+  },
+]
 const allQuestList = [
   {
     headList: [...headList4],
     questList: [...questionList4]
   },
+  {
+    headList: [...headList4],
+    questList: [...questionList5]
+  },
+  {
+    headList: [...headList5],
+    questList: [...questionList6]
+  },
+  {
+    headList: [...headList6],
+    questList: [...questionList7]
+  },
 ]
-
+const allQuestList2 = [
+  {
+    headList: [...headList4],
+    questList: [...questionList5]
+  },
+]
+const allQuestList3 = [
+  {
+    headList: [...headList5],
+    questList: [...questionList6]
+  },
+]
+const allQuestList4 = [
+  {
+    headList: [...headList6],
+    questList: [...questionList7]
+  },
+]
 export {
   headList1,
   allQuestList,

@@ -4,12 +4,8 @@
       <p><strong>Scenario - Tutorial:</strong></p>
       <p>
         On this page, you will walk through a tutorial that helps you
-        familiarize with the environment and tasks you will implement in the
+        familiarize with the tasks you will implement in the
         three first-person perspective scenarios of this study.
-      </p>
-      <p>
-        This tutorial does not count towards the Four first-person perspective
-        scenarios for this study.
       </p>
     </div>
     <div class="game-box">
@@ -22,23 +18,16 @@
       />
     </div>
     <div class="content">
-      <p>
-        Please enter the Code at the end of the game below to confirm that you
-        have completed the tutorial:
-      </p>
       <div class="input-wrapper">
         <a-input
-          style="width: 400px; margin-bottom: 30px; position: relative"
+          style="width: 400px; position: relative"
           allowClear
           v-model="gameCode"
+          @input="toUpper"
           placeholder="please input code"
         />
         <p v-if="miss">Incorrect code</p>
       </div>
-      <p>
-        Now you have completed the tutorial! Click the ‘Proceed’ button below to
-        start the first game scenario.
-      </p>
       <div class="input-wrapper">
         <a-button type="primary" shape="round" @click="gotoNext">
           Proceed
@@ -60,8 +49,8 @@ export default {
       gameCode: "",
       miss: false,
       gameInfo: {
-        src: "/unity/With_regulation/index.html",
-        code: "ST0BC",
+        src: "/unity/Scenario_Tutorial/index.html",
+        code: "WE4JD",
       },
     };
   },
@@ -77,6 +66,9 @@ export default {
   },
 
   methods: {
+    toUpper(event) {
+      this.gameCode = event.target.value.toUpperCase();
+    },
     gotoNext() {
       if (this.gameCode.trim() !== this.gameInfo.code) {
         this.miss = true;
@@ -131,18 +123,49 @@ export default {
     height: 85%;
     border: 1px dashed #efefef;
   }
+  // .input-wrapper {
+  //   height: auto;
+  //   position: relative;
+  //   p {
+  //     color: red;
+  //     position: absolute;
+  //     font-size: 12px;
+  //     margin: 0px;
+  //     bottom: 0px;
+  //     // top: 10px;
+  //     // left: 40%;
+  //   }
+  // }
   .input-wrapper {
-    height: auto;
     position: relative;
-    p {
-      color: red;
-      position: absolute;
-      font-size: 12px;
-      margin: 0px;
-      bottom: 0px;
-      // top: 10px;
-      // left: 40%;
-    }
+    height: 70px;
+    top: 10px
+    
+    /* 不要在这里设置 height 或 font-size */
+  }
+  .input-wrapper /deep/ .ant-input{
+    position: relative;
+    height: 50px;
+    font-size: 20px;
+    // p {
+    //   color: red;
+    //   position: absolute;
+    //   font-size: 20px;
+    //   margin: 0px;
+    //   bottom: 0px;
+    // }
+  }
+    .input-wrapper p{
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 如果需要，也移除默认内边距 */
+    color: red;
+    font-size: 12px; /* 或任何合适的大小 */
+    line-height: 1; /* 防止行高过大 */
+    position: relative; /* 如果您需要它绝对定位 */
+    bottom: 0; /* 定位到 input-wrapper 的底部 */
+    left: 0; /* 定位到 input-wrapper 的左边 */
+    border: 1px solid red; /* 临时边框，用于调试 */
+
   }
 }
 </style>

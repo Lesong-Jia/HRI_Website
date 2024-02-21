@@ -8,6 +8,8 @@
       :labelCol="labelCol"
       :wrapperCol="wrapperCol"
     >
+    <p><strong>Part 1 - Pre-study Questions:</strong></p>
+    <p class="line-p"></p>
       <div style="display: flex; align-items: center; margin: 20px 0px">
         <p class="require-radio">Please enter your age:</p>
         <a-form-model-item
@@ -112,7 +114,7 @@
         </a-form-model-item>
         <p class="line-p"></p>
       </div>
-      <div>
+      <!-- <div>
         <p style="width: 600px">
           What Virtual Reality products (eg. Virtual Reality (VR) Glasses,
           Oculus, HoloLens), or services(eg. Virtual Reality Exposure Therapy,
@@ -134,7 +136,7 @@
           </p>
         </a-form-model-item>
       </div>
-      <p class="line-p"></p>
+      <p class="line-p"></p> -->
       <div
         style="margin: 20px 0px"
         v-for="radioList in radioListAll2"
@@ -181,6 +183,7 @@ import {
   radioList3,
   radioList4,
   radioList5,
+  radioList6,
 } from "../tool";
 
 const radioListAll1 = [
@@ -189,24 +192,36 @@ const radioListAll1 = [
     key: "radio2",
     list: radioList2,
   },
-  {
-    quest: "Choose one or more races that you consider yourself to be:",
-    key: "radio3",
-    list: radioList3,
-  },
+  // {
+  //   quest: "Choose one or more races that you consider yourself to be:",
+  //   key: "radio3",
+  //   list: radioList3,
+  // },
 ];
 const radioListAll2 = [
   {
     quest:
-      "How long have you been using Virtual Reality (VR) products or services?",
+      "What is your eagerness level to adopt new technologies?",
+    key: "radio3",
+    list: radioList3,
+  },
+  {
+    quest:
+      "What is your knowledge level in regard to social robots in smart cities?",
     key: "radio4",
     list: radioList4,
   },
   {
     quest:
-      "What is the frequency of your Virtual Reality (VR) Products or Services usage?",
+      "Have you heard any stories about social robots assisting people on the road?",
     key: "radio5",
     list: radioList5,
+  },
+  {
+    quest:
+      "How much do you trust social robots?",
+    key: "radio6",
+    list: radioList6,
   },
 ];
 export default {

@@ -71,7 +71,11 @@ const routes = [
     name: "scenarioTutorial",
     component: () => import("@/views/scenarioTutorial/index.vue"),
   },
-
+  {
+    path: "/Before_New",
+    name: "Before_New",
+    component: () => import("@/views/Before_New/index.vue"),
+  },
 ];
 
 const router = new VueRouter({
