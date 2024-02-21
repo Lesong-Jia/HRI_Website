@@ -41,10 +41,11 @@ const headList5 = [
 ]
 
 const headList6 = [
-  'Definitely Disagree',
-  'Slightly Disagree',
-  'Slightly Agree',
-  'Definitely Agree'
+  'Strongly Disagree<br>1',
+  '<br><br>2',
+  'Neutral<br><br>3',
+  '<br><br>4',
+  'Strongly Agree<br>5'
 ]
 
 const questionList1 = [

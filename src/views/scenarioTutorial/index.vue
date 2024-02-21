@@ -6,6 +6,8 @@
         On this page, you will walk through a tutorial that helps you
         familiarize with the tasks you will implement in the
         three first-person perspective scenarios of this study.
+        <br>
+        If you want to scroll the viewport but find that the mouse wheel is not working, please move the mouse out of the game window and try again.
       </p>
     </div>
     <div class="game-box">

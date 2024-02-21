@@ -27,7 +27,7 @@
         emotion regulation habits.
       </li>
       <li>
-        Experience an adversarial game or watch videos that present different life scenarios. 
+        Experience an game or watch videos that present different life scenarios. 
         You will play the role of a babysitter in the game, 
         experiencing situations that may occur while taking care of a child, 
         and answer corresponding questionnaires.
@@ -44,9 +44,7 @@
     <br />
     <strong> Benefits: </strong>
     <p>
-      Information collected during the study would contribute to address user
-      privacy challenges and concerns and to further foster the trust and
-      responsible use of Virtual Reality applications.
+      Information collected during the study would contribute to optimize the interaction between human and social robots.
     </p>
     <br />
     <strong> Incentives for participation: </strong>
