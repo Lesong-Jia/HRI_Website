@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <p>Thank you for participating</p>
+    <p>Thank you for participating. Here is your code: a9553d3eb7. 
+      Please copy this value to paste into CloudResearch Connection.
+    </p>
   </div>
 </template>
 <script>
