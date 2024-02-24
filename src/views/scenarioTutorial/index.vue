@@ -7,7 +7,12 @@
         familiarize with the tasks you will implement in the
         three first-person perspective scenarios of this study.
         <br>
-        If you want to scroll the viewport but find that the mouse wheel is not working, please move the mouse out of the game window and try again.
+        <br>
+        Once you have completed the tutorial, you can obtain a code. 
+        By entering the code into the input box at the bottom of the game window, you can enter the official experiment.
+        <br>
+        <br>
+        <span style="color: red;">If you want to scroll the viewport but find that the mouse wheel is not working, please move the mouse out of the game window and try again.</span>
       </p>
     </div>
     <div class="game-box">
@@ -75,7 +80,7 @@ export default {
       if (this.gameCode.trim() !== this.gameInfo.code) {
         this.miss = true;
       } else {
-        this.$router.push("/gameExperience");
+        this.$router.push("/Before_Formal");
       }
     },
     //for receivedata

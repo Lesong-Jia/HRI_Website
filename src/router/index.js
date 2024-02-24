@@ -75,6 +75,11 @@ const routes = [
     path: "/Before_New",
     name: "Before_New",
     component: () => import("@/views/Before_New/index.vue"),
+  },  
+  {
+    path: "/Before_Formal",
+    name: "Before_Formal",
+    component: () => import("@/views/Before_Formal/index.vue"),
   },
 ];
 
