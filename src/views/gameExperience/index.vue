@@ -157,7 +157,6 @@ export default {
           this.showVideo =true;
           this.$router.push("/Before_New");
         } else {
-          this.$router.push("/last_finish");
           const options = {
             method: 'POST',
             url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
@@ -166,9 +165,9 @@ export default {
           };
           try {
             const { data } = await axios.request(options);
-            console.log(data);
+            this.$router.push("/last_finish");
           } catch (error) {
-            console.error(error);
+            this.$router.push("/last_finish");
           }
         }
       }
