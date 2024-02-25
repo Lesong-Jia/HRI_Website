@@ -8,3 +8,4 @@ public/unity/group1/Positive_Scen.../Positive_Man_Regulation_Empathy.data filter
 public/unity/group1/Positive_[[:space:]]Scenario[[:space:]]/Positive_Man_Regulation_Empathy.data filter=lfs diff=lfs merge=lfs -text
 public/unity/group1/Negative_Scenario/build/Negative_Man_Regulation_Empathy.data filter=lfs diff=lfs merge=lfs -text
 public/unity/group1/Positive_Scenario/build/Positive_Man_Regulation_Empathy.data filter=lfs diff=lfs merge=lfs -text
+*.data filter=lfs diff=lfs merge=lfs -text
