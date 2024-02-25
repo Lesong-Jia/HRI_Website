@@ -1,6 +1,5 @@
 const CACHE_NAME = 'unity-cache-v1';
 const urlsToCache = [
-  '/unity/With_regulation/Build/With_regulation.framework.js'
   // 其他需要预加载的资源
 ];
 
