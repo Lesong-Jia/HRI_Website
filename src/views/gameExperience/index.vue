@@ -54,44 +54,44 @@ export default {
         // 第一组
         {
           1: {
-            src: "/unity/group4/Positive_Scenario/index.html",
+            src: "/unity/group2/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           2: {
-            src: "/unity/group4/Negative_Scenario/index.html",
+            src: "/unity/group2/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
         // 第二组
         {
           3: {
-            src: "/unity/group4/Positive_Scenario/index.html",
+            src: "/unity/group2/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           4: {
-            src: "/unity/group4/Negative_Scenario/index.html",
+            src: "/unity/group2/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
         //第三组
         {
           5: {
-            src: "/unity/group4/Positive_Scenario/index.html",
+            src: "/unity/group2/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           6: {
-            src: "/unity/group4/Negative_Scenario/index.html",
+            src: "/unity/group2/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
         //第四组
         {
           7: {
-            src: "/unity/group4/Positive_Scenario/index.html",
+            src: "/unity/group2/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           8: {
-            src: "/unity/group4/Negative_Scenario/index.html",
+            src: "/unity/group2/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
