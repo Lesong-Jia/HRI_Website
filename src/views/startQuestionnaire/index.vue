@@ -144,7 +144,13 @@ export default {
   },
   methods: {
     setGameGroupType() {
-      const grouptype = Math.floor(Math.random() * (4));;
+      let grouptype;
+      if(this.allQuestionForm.lastQuestionnaire.radio1==="A. Male"){
+        grouptype=0;
+      }
+      else{
+        grouptype=1;
+      }
       this.$store.commit("SET_GAME_GROUP_TYPE", grouptype);
       this.$store.commit(
         "SET_GAME_ARR_LIST",
