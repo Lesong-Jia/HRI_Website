@@ -27,11 +27,11 @@
     <div class="content">
       <div class="input-wrapper">
         <a-input
-          style="width: 400px; position: relative"
+          style="width: 500px; position: relative"
           allowClear
           v-model="gameCode"
           @input="toUpper"
-          placeholder="please input code"
+          placeholder="please input code after finishing the game above"
         />
         <p v-if="miss">Incorrect code</p>
       </div>

@@ -24,7 +24,7 @@
     </div>
     <div class="input-wrapper" v-if="gameStep">
       <a-input
-        style="width: 400px; position: relative"
+        style="width: 500px; position: relative"
         allowClear
         v-model="gameCode"
         @input="toUpper"
