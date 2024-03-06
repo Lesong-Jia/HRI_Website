@@ -28,7 +28,7 @@
         allowClear
         v-model="gameCode"
         @input="toUpper"
-        placeholder="please input code"
+        placeholder="please input code after finishing the game above"
       />
       <p v-if="miss">Incorrect code</p>
     </div>

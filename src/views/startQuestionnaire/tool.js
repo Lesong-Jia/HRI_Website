@@ -24,11 +24,11 @@ const headList3 = [
 
 const headList4 = [
   'Strongly Disagree<br>1',
-  '<br><br>2',
-  '<br><br>3',
+  'Disagree<br><br>2',
+  'Somewhat Disagree<br>3',
   'Neutral<br><br>4',
-  '<br><br>5',
-  '<br><br>6',
+  'Somewhat Agree<br>5',
+  'Agree<br><br>6',
   'Strongly Agree<br>7'
 ]
 
@@ -386,11 +386,11 @@ const allQuestList = [
     questList: [...questionList5]
   },
   {
-    headList: [...headList5],
+    headList: [...headList4],
     questList: [...questionList6]
   },
   {
-    headList: [...headList6],
+    headList: [...headList4],
     questList: [...questionList7]
   },
 ]
@@ -402,13 +402,13 @@ const allQuestList2 = [
 ]
 const allQuestList3 = [
   {
-    headList: [...headList5],
+    headList: [...headList4],
     questList: [...questionList6]
   },
 ]
 const allQuestList4 = [
   {
-    headList: [...headList6],
+    headList: [...headList4],
     questList: [...questionList7]
   },
 ]

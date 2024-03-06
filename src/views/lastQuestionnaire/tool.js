@@ -79,10 +79,10 @@ const radioList5 = [
   "E. Very Often",
 ]
 const radioList6 = [
-  "A. Do Not Trust At All",
-  "B. Trust A Little",
+  "A. Completely Do Not Trust",
+  "B. Somewhat Do Not Trust",
   "C. Neutral",
-  "D. Trust Somewhat",
+  "D. Somewhat Trust",
   "E. Completely Trust",
 ]
 export {
