@@ -95,14 +95,14 @@ import {
 
 const radioListAll1 = [
   {
-    quest: "How much do you think the robot's emotion regulation conversation below affected your decision to accept its suggestions in the amusement park scenario?",
+    quest: "How much do you think the robot's emotion regulation conversation below affected your decision in the amusement park scenario?",
     key: "radio1",
     list: radioList1,
   },
 ];
 const radioListAll2 = [
   {
-    quest: "How much do you think the robot's emotion regulation conversation below affects your decision to accept its suggestions in the soccer game scenario?",
+    quest: "How much do you think the robot's emotion regulation conversation below affects your decision in the soccer game scenario?",
     key: "radio2",
     list: radioList2,
   },
