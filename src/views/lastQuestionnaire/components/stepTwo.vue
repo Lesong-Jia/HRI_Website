@@ -184,6 +184,8 @@ import {
   radioList4,
   radioList5,
   radioList6,
+  radioList7,
+  radioList8,
 } from "../tool";
 
 const radioListAll1 = [
@@ -222,6 +224,18 @@ const radioListAll2 = [
       "How much do you trust social robots?",
     key: "radio6",
     list: radioList6,
+  },
+  {
+    quest:
+      "How likely are you to cross the street at a designated crosswalk versus jaywalking when in a rush?",
+    key: "radio7",
+    list: radioList7,
+  },
+  {
+    quest:
+      "Would you consider accepting assistance from a humanoid assistant robot in your daily activities?",
+    key: "radio8",
+    list: radioList8,
   },
 ];
 export default {

@@ -143,9 +143,9 @@ export default {
           };
           try {
             const { data } = await axios.request(options);
-            this.$router.push("/last_finish");
+            this.$router.push("/EndQuestionnaire");
           } catch (error) {
-            this.$router.push("/last_finish");
+            this.$router.push("/EndQuestionnaire");
           }
         }
       }

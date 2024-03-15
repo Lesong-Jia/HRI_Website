@@ -81,6 +81,11 @@ const routes = [
     name: "Before_Formal",
     component: () => import("@/views/Before_Formal/index.vue"),
   },
+  {
+    path: "/EndQuestionnaire",
+    name: "EndQuestionnaire",
+    component: () => import("@/views/EndQuestionnaire/index.vue"),
+  },
 ];
 
 const router = new VueRouter({

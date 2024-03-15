@@ -85,6 +85,20 @@ const radioList6 = [
   "D. Somewhat Trust",
   "E. Completely Trust",
 ]
+const radioList7 = [
+  "A. Always use a designated crosswalk",
+  "B. Mostly use a designated crosswalk",
+  "C. Sometimes use a designated crosswalk, sometimes jaywalk",
+  "D. Mostly jaywalk",
+  "E. Always jaywalk",
+]
+const radioList8 = [
+  "A. Completely Do Not Consider",
+  "B. Somewhat Do Not Consider",
+  "C. Neutral",
+  "D. Somewhat Consider",
+  "E. Completely Consider",
+]
 export {
   questList,
   radioList1,
@@ -92,5 +106,7 @@ export {
   radioList3,
   radioList4,
   radioList5,
-  radioList6
+  radioList6,
+  radioList7,
+  radioList8
 }
