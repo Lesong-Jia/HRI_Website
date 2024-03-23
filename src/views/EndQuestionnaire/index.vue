@@ -22,6 +22,8 @@ import api from "@/api/index.js";
 import stepOne from "./components/stepOne.vue";
 import stepTwo from "./components/stepTwo.vue";
 import moment from "moment";
+import axios from 'axios';
+
 export default {
   name: "last",
   components: { stepOne, stepTwo },
@@ -67,7 +69,18 @@ export default {
             EndQuestionnaire: { ...that.form },
             // endTime: moment().format("YYYY-MM-DD HH:mm:ss"),
           });
-          this.$router.push("/last_finish");
+          const options = {
+            method: 'POST',
+            url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
+            headers: {'content-type': 'application/json'},
+            data: {...this.allQuestionForm}
+          };
+          try {
+            const { data } = await axios.request(options);
+            this.$router.push("/last_finish");
+          } catch (error) {
+            this.$router.push("/last_finish");
+          }
           
         // this.$refs.stepOne.$refs["form"].validate(async (valid) => {
         //   if (!valid) {

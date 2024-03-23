@@ -38,7 +38,7 @@
               </p>
               <p v-else-if="tableIndex === 1">
                 <br><br>
-                We would like to ask you some questions about your attitude to social robots. 
+                We would like to ask you some questions about your attitude towards social robots. 
                 Please select to which extent you agree or disagree with the following statements.
               </p>
               <p v-else-if="tableIndex === 3">

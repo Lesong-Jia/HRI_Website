@@ -21,8 +21,7 @@
       games could be launched smoothly. Failing to do so may result in early
       terminations of the survey, with your response being invalid and
       ineligible for any reward. Please make sure that you access this survey
-      from cloud research and complete the redirected cloud research website by
-      the end of the survey to receive your reward.
+      from cloud research and complete the necessary steps when redirected back to the cloudresearch website after this survey to receive your reward.
     </p>
     <br />
     <strong> Inclusion Criteria: </strong>

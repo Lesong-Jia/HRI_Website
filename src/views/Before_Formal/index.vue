@@ -4,7 +4,7 @@
       <p><strong>Congratulations on completing the tutorial. Next, the formal experiment will begin. 
         <br>
         <br>
-        In the formal experiment, before each game starts, the game need some time to be loaded. 
+        In the formal experiment, before each game starts, the game needs some time to be loaded. 
         <br>
         <br>
         After the game has loaded, you can start the game by clicking the "Start" button. 

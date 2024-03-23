@@ -135,18 +135,7 @@ export default {
           this.showVideo =true;
           this.$router.push("/Before_New");
         } else {
-          const options = {
-            method: 'POST',
-            url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
-            headers: {'content-type': 'application/json'},
-            data: {...this.allQuestionForm}
-          };
-          try {
-            const { data } = await axios.request(options);
-            this.$router.push("/EndQuestionnaire");
-          } catch (error) {
-            this.$router.push("/EndQuestionnaire");
-          }
+          this.$router.push("/EndQuestionnaire");
         }
       }
     },
