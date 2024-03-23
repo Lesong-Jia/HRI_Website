@@ -27,13 +27,13 @@
         emotion regulation habits.
       </li>
       <li>
-        Experience an game or watch videos that present different life scenarios. 
+        Experience games that present different life scenarios. 
         You will play the role of a babysitter in the game, 
         experiencing situations that may occur while taking care of a child, 
         and answer corresponding questionnaires.
       </li>
     </ol>
-    The duration of the study should be approximately 30 minutes.<br />
+    The duration of the study should be approximately 25 minutes.<br />
     <br />
     <strong> Risks and Discomforts: </strong>
     <p>
@@ -48,7 +48,7 @@
     </p>
     <br />
     <strong> Incentives for participation: </strong>
-    <p>You will be compensated with $4 for the 30 minutes study.</p>
+    <p>You will be compensated with $5 for the 25 minutes study.</p>
 
     <br />
     <strong> Privacy, Confidentiality, and Data Security: </strong>

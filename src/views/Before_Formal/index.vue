@@ -4,10 +4,10 @@
       <p><strong>Congratulations on completing the tutorial. Next, the formal experiment will begin. 
         <br>
         <br>
-        In the formal experiment, before each game starts, a video will be presented to you. 
+        In the formal experiment, before each game starts, the game need some time to be loaded. 
         <br>
         <br>
-        After the video finishes playing and the game has loaded, you can start the game by clicking the "Start" button. 
+        After the game has loaded, you can start the game by clicking the "Start" button. 
         <br>
         <br>
         <span style="color: red;">Please note that depending on your internet speed, the game loading time may vary between 10 seconds to 1 minute, so please be patient.</span>

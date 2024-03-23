@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
         <!-- Video overlay -->
-    <div class="video-overlay" v-if="showVideo">
+    <!-- <div class="video-overlay" v-if="showVideo">
       <video 
         id="overlayVideo" 
         @ended="onVideoEnded" 
@@ -11,7 +11,7 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    
+     -->
     <div class="game-box">
       <iframe
         v-show="!showVideo"
@@ -74,7 +74,7 @@ export default {
           },
         },
       ],
-      showVideo: true, // 控制视频的显示
+      showVideo: false, // 控制视频的显示
     };
   },
   computed: {
