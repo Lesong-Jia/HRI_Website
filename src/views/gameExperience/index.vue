@@ -54,22 +54,22 @@ export default {
         // 第一组
         {
           1: {
-            src: "/unity/group3/Positive_Scenario/index.html",
+            src: "/unity/group5/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           2: {
-            src: "/unity/group3/Negative_Scenario/index.html",
+            src: "/unity/group5/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
         // 第二组
         {
           3: {
-            src: "/unity/group4/Positive_Scenario/index.html",
+            src: "/unity/group6/Positive_Scenario/index.html",
             code: "OY5FD",
           },
           4: {
-            src: "/unity/group4/Negative_Scenario/index.html",
+            src: "/unity/group6/Negative_Scenario/index.html",
             code: "ST0BC",
           },
         },
@@ -134,8 +134,20 @@ export default {
         if (this.quesStep <= 2) {
           this.showVideo =true;
           this.$router.push("/Before_New");
-        } else {
-          this.$router.push("/EndQuestionnaire");
+        } else {          
+          //this.$router.push("/EndQuestionnaire");
+          const options = {
+            method: 'POST',
+            url: 'https://urcqxtiie0.execute-api.us-east-2.amazonaws.com/staging/hriwebsite4eade50d-staging',
+            headers: {'content-type': 'application/json'},
+            data: {...this.allQuestionForm}
+          };
+          try {
+            const { data } = await axios.request(options);
+            this.$router.push("/last_finish");
+          } catch (error) {
+            this.$router.push("/last_finish");
+          }
         }
       }
     },
