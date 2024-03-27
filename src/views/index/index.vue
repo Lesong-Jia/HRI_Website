@@ -75,7 +75,8 @@ export default {
       } else {
         const timestamp = moment().format("YYYYMMDDHHmmss");
         const randomNum = Math.floor(Math.random() * 1000000); // 生成一个六位数的随机数
-        const uniqueId = `${timestamp}${randomNum}`;
+        const grouptype = "group1";
+        const uniqueId = `${grouptype}${timestamp}${randomNum}`;
         this.$store.commit("SET_ALL_QUESTION_FORM", {
           ParticipantID: uniqueId,
         });
