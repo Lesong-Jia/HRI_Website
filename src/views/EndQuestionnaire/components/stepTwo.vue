@@ -15,7 +15,7 @@
         :key="radioList.key"
       >
         <p class="require-radio">{{ radioList.quest }}</p>
-        <img src="/Image/image1.png" alt="Description" style="max-width: 50%; height: auto;">
+        <img src="/Image/image12.png" alt="Description" style="max-width: 50%; height: auto;">
         <br><br>
         <a-form-model-item
           :prop="radioList.key"
@@ -52,7 +52,7 @@
         :key="radioList.key"
       >
         <p class="require-radio">{{ radioList.quest }}</p>
-        <img src="/Image/image2.png" alt="Description" style="max-width: 50%; height: auto;">
+        <img src="/Image/image22.png" alt="Description" style="max-width: 50%; height: auto;">
         <br><br>
         <a-form-model-item
           :prop="radioList.key"
